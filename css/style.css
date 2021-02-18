@@ -8,6 +8,12 @@ body {
   font-weight: bold;
 }
 
+main {
+  width: 100%;
+  height: calc(100vh -100px);
+  /* background-color:  yellow; */
+}
+
 .text_center {
   text-align: center;
 }
@@ -18,6 +24,10 @@ body {
 
 .color_white {
   color: #fff;
+}
+
+.color_grey {
+  color: grey;
 }
 
 ul {
@@ -33,16 +43,20 @@ a:hover {
   color: #fff;
 }
 
+/* aside */
 .aside_left {
   height: 100%;
   width: 300px;
   background-color: black;
-  color: grey;
   padding-left: 30px;
 }
 
 .box_logo img {
   margin-top: 10px;
+}
+
+.box_logo i {
+  display:  none;
 }
 
 .nav_top {
@@ -54,13 +68,17 @@ a:hover {
 }
 
 .nav_top i {
-  font-size: 20px;
+  font-size: : 20px;
   margin-right: 8px;
 }
 
 .box_playlist {
   display: flex;
   margin: 10px 0;
+}
+
+.box_playlist:hover a {
+  color: #fff;
 }
 
 .aside_left h3 {
@@ -99,12 +117,86 @@ a:hover {
   border-color: grey;
 }
 
-.install i {
+.install:hover {
+  color:#fff;
+}
+
+.icon_download i {
   font-size: 18px;
   margin-right: 10px;
 }
 
-.login i {
+.icon_login i {
   font-size: 25px;
   margin-right: 10px;
+}
+.name_users h3:hover {
+  color: lightgrey;
+}
+/* /aside */
+
+/* footer {
+  height: 100px;
+  width: 100%;
+  background-color: blue;
+} */
+
+/* RESPONSIVE */
+/* DESKTOP */
+@media screen and (min-width:992px) and (max-width:1200px) {
+  .box_logo i {
+    display: none;
+  }
+}
+
+/* TABLLET */
+@media screen and (min-width:768px) and (max-width:991px) {
+  .box_logo i {
+    display: none;
+  }
+}
+
+/* SMARTPHONE */
+@media screen and (max-width:767px) {
+  .aside_left {
+    width: 100px;
+  }
+
+  .box_logo img {
+    display: none;
+  }
+
+ .box_logo i {
+   padding-top: 20px;
+   font-size: 30px;
+   display: block;
+   color: #fff;
+ }
+
+ .nav_top i {
+   display: visible;
+   color: #fff;
+   font-size: 20px;
+ }
+
+ .nav_top a,
+ .nav_top h3,
+ .box_playlist,
+ .box_your_playlist,
+ .install .text_install,
+ .login .name_users,
+ .box_account hr{
+   display: none;
+ }
+
+ .icon_login i {
+   font-size: 30px;
+   margin: 20px 0;
+ }
+
+.icon_download i {
+  font-size: 20px;
+  margin-left: 4px;
+}
+
 }
