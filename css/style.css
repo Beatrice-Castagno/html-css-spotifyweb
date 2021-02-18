@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: bold;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_uppercase {
+  text-transform: uppercase;
+}
+
+.color_white {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.aside_left {
+  height: 100%;
+  width: 300px;
+  background-color: black;
+  color: grey;
+  padding-left: 30px;
+}
+
+.box_logo img {
+  margin-top: 10px;
+}
+
+.nav_top {
+  margin: 20px 0;
+}
+
+.nav_top li {
+  padding-bottom: 10px;
+}
+
+.nav_top i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.box_playlist {
+  display: flex;
+  margin: 10px 0;
+}
+
+.aside_left h3 {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.plus i {
+  font-size: 35px;
+}
+
+.create_playlist h4 {
+  font-size: 17px;
+  padding: 10px 0;
+}
+
+.your_playlist li {
+  margin-bottom: 8px;
+}
+
+.box_account {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 250px;
+}
+
+.install, .login {
+  display: flex;
+  align-items: center;
+}
+
+.box_account hr {
+  margin-top: 10px;
+  width: 90%;
+  border-color: grey;
+}
+
+.install i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.login i {
+  font-size: 25px;
+  margin-right: 10px;
+}
