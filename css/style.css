@@ -54,8 +54,9 @@ a:hover {
   background-color: #000;
   padding-left: 30px;
 }
+
 .box_logo {
-  height: 100px;
+  height: 75px;
   margin-bottom: 5px;
 }
 
@@ -105,15 +106,16 @@ a:hover {
 }
 
 .create_playlist h4 {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .box_your_playlist {
-  overflow: scroll;
+  /* height: 100px; */
+  overflow: auto;
 }
 
 .your_playlist li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .box_account {
@@ -121,7 +123,7 @@ a:hover {
   flex-direction: column;
   justify-content: flex-end;
   height: 35%;
-  padding-bottom: 10px;
+  padding-bottom: 10px
 }
 
 .install, .login {
@@ -156,10 +158,95 @@ a:hover {
 /* footer */
 footer {
   position: relative;
+  display: flex;
   height: 100px;
   width: 100%;
   background-color: #282828;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.box_sinistro {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.box_sinistro,
+.box_icon_footer,
+.list_player,
+.box_destro {
+  display: flex;
+  align-items: center;
+}
+
+.artist_song_name {
+  padding-left: 10px;
+}
+
+.box_sinistro img {
+  height: 50px;
+}
+
+.box_icon_footer {
+  padding-left: 50px;
+}
+
+.box_icon_footer i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+/* icone player */
+
+.box_icon_player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list_player li {
+  margin: 0 10px;
+}
+
+.other_buttons {
+ font-size: 15px;
+}
+
+.button_play {
+  font-size: 40px;
+  margin: 0 15px;
+}
+
+.button_arrow {
+  font-size: 30px;
+}
+
+.bar {
+  border-radius: 10px;
+  height: 3px;
+  background-color: grey;
+}
+
+.scorrimento {
+  display: flex;
+  width: 400px;
+  margin: 20px 0;
+}
+
+.box_destro {
+  padding-right: 10px;
+}
+
+.box_destro i {
+  padding: 0 8px;
+  font-size: 15px;
+}
+
+.volume {
+  margin-left: 3px;
+  width: 100px;
+}
+
+/* /icone player */
 /* footer */
 
 /* RESPONSIVE */
