@@ -35,16 +35,23 @@ main {
 ul {
   list-style: none;
 }
-
 a {
-  color: grey;
   text-decoration: none;
+  color: #666666;
 }
 
 a:hover {
-  color: #fff;
+ color: #fff;
 }
 
+.btn_aside {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+}
 /* aside */
 .aside_left {
   display: flex;
@@ -56,8 +63,7 @@ a:hover {
 }
 
 .box_logo {
-  height: 75px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .logo_large {
@@ -70,12 +76,6 @@ a:hover {
 }
 
 .nav_top {
-  height: 500px;
-}
-
-.list_nav {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 15px;
 }
 
@@ -90,45 +90,55 @@ a:hover {
   margin-right: 8px;
 }
 
-.box_playlist {
+.create_playlist {
+  margin: 10px 0;
+}
+
+.button_playlist {
   display: flex;
-  margin: 12px 0;
   align-items: center;
+  margin-top: 10px;
 }
 
 .box_playlist:hover a {
   color: #fff;
 }
 
-.plus i {
+.button_playlist button:hover {
+  color: #fff;
+}
+
+.button_playlist i:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.button_playlist button {
+  font-size: 15px;
+}
+
+.button_playlist i {
   font-size: 35px;
   margin-right: 15px;
 }
 
-.create_playlist h4 {
-  font-size: 14px;
-}
-
-.box_your_playlist {
-  /* height: 100px; */
+.playlist_name li {
+  margin-bottom: 10px;
   overflow: auto;
 }
 
-.your_playlist li {
-  margin-bottom: 10px;
+.box_playlist {
+  overflow-y: auto;
+  margin: 12px 0;
+  height: 100%;
+}
+
+.playlist_name li {
+  margin-bottom: 15px;
 }
 
 .box_account {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 35%;
-  padding-bottom: 10px
-}
-
-.install, .login {
-  display: flex;
-  align-items: center;
+  padding-bottom: 15px;
 }
 
 .box_account hr {
@@ -137,21 +147,27 @@ a:hover {
   border-color: grey;
 }
 
-.install:hover {
-  color:#fff;
-}
-
-.icon_download i {
+.download_app i {
   font-size: 16px;
   margin-right: 10px;
 }
 
-.icon_login i {
+.download_app,
+.users_login {
+  display: flex;
+  align-items: center;
+}
+
+.users_login i {
   font-size: 25px;
   margin-right: 10px;
 }
 
-.name_users h3:hover {
+.download_app button:hover {
+  color: #fff;
+}
+
+.users_login button:hover {
   color: lightgrey;
 }
 /* /aside */
@@ -252,22 +268,31 @@ footer {
 /* RESPONSIVE */
 /* DESKTOP */
 @media screen and (min-width:992px) and (max-width:1200px) {
+  /* aside */
   .logo_small {
     display: none;
   }
+  /* /aside */
+
 }
 
 /* TABLLET */
 @media screen and (min-width:768px) and (max-width:991px) {
+  /* aside */
   .logo_small {
     display: none;
   }
+  /* /aside */
 }
 
 /* SMARTPHONE */
 @media screen and (max-width:767px) {
+  /* aside */
   .aside_left {
+    position: relative;
     width: 90px;
+    align-items: center;
+    padding:0;
   }
 
   .logo_large {
@@ -275,40 +300,57 @@ footer {
   }
 
  .logo_small {
-   padding-top: 20px;
-   height: 50px;
+   margin: 10px 0;
+   height: 40px;
    display: block;
    color: #fff;
  }
 
- .nav_top a,
- .nav_top h3,
+ .list_nav svg {
+  display: visible;
+  color: #fff;
+  height: 25px;
+  margin-right: 0px;
+ }
+
+ .list_nav a,
+ .create_playlist,
  .box_playlist,
- .box_your_playlist,
- .install .text_install,
- .login .name_users,
- .box_account hr{
+ .download_app button,
+ .box_account hr,
+ .users_login button {
    display: none;
  }
 
- .list_nav svg {
-   display: visible;
-   color: #fff;
-   height: 25px;
+ .box_account {
+   position:absolute;
+   bottom:0;
  }
 
- .icon_login i {
+ .download_app,
+ .users_login  {
+   display: flex;
+   flex-direction: column;
+   padding: 5px 0;
+   margin-left: 10px;
+ }
+
+ .users_login i {
    font-size: 30px;
-   margin: 20px 0;
  }
 
- .icon_login:hover{
+ .download_app i {
+   font-size: 20px;
+ }
+
+ .download_app i:hover,
+ .users_login i:hover {
    color: #fff;
  }
-
-.icon_download i {
-  font-size: 20px;
-  margin-left: 4px;
+ /* /aside */
+/* footer */
+.box_icon_player {
+  width: 20%;
 }
 
 }
