@@ -22,16 +22,16 @@
     <aside class="aside_left color_grey">
       <!-- logo spotify -->
       <div class="box_logo">
-        <img class="logo_large" src="img/logo.svg" alt="logo-spotify">
-        <img class="logo_small" src="img/logo-small.svg" alt="logo-spotify-small">
+        <a href="#"><img class="logo_large" src="img/logo.svg" alt="logo-spotify"></a>
+        <a href="#"><img class="logo_small" src="img/logo-small.svg" alt="logo-spotify-small"></a>
       </div>
       <!-- /logo spotify -->
       <!-- navigazione sotto logo -->
       <nav class="nav_top">
         <ul class="list_nav">
-          <li><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="#666666"/></svg><a href="#">Home</a></li>
-          <li><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="#666666" fill-rule="evenodd"/></svg><a href="#"> Cerca</a></li>
-          <li><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" fill="#666666"/></svg><a href="#"> La tua libreria</a></li>
+          <li><a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" /></svg><span>Home</span></a></li>
+          <li><a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill-rule="evenodd"/></svg><span> Cerca</span></a></li>
+          <li><a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"/></svg><span> La tua libreria</span></a></li>
         </ul>
       </nav>
       <!-- /navigazione sotto logo -->
@@ -40,18 +40,18 @@
         <h3 class="text_uppercase color_white">Playlist</h3>
         <div class="button_playlist">
           <i class="fas fa-plus-square"></i>
-          <button class="color_grey btn_aside" type="button" name="button"> Create playlist</button>
+          <button class="color_grey btn_general" type="submit" name="button"> Create playlist</button>
         </div>
       </div>
       <div class="box_playlist">
         <ul class="playlist_name">
-          <li>Nome Playlist</li>
-          <li>Nome Playlist</li>
-          <li>Nome Playlist</li>
-          <li>Nome Playlist</li>
-          <li>Nome Playlist</li>
-          <li>Nome Playlist</li>
-          <li>Nome Playlist</li>
+          <li><a href="#">Nome Playlist</a></li>
+          <li><a href="#">Nome Playlist</a></li>
+          <li><a href="#">Nome Playlist</a></li>
+          <li><a href="#">Nome Playlist</a></li>
+          <li><a href="#">Nome Playlist</a></li>
+          <li><a href="#">Nome Playlist</a></li>
+          <li><a href="#">Nome Playlist</a></li>
         </ul>
       </div>
       <!-- box fondo aside -->
@@ -60,7 +60,7 @@
         <div class="install">
           <div class="download_app">
             <i class="far fa-arrow-alt-circle-down"></i>
-           <button class="color_grey btn_aside" type="button" name="button">Installa app</button>
+           <button class="color_grey btn_general" type="submit" name="button">Installa app</button>
           </div>
         </div>
         <!-- /sezione download app-->
@@ -69,7 +69,7 @@
         <div class="login">
           <div class="users_login">
            <i class="fas fa-user-circle"></i>
-           <button class="color_white btn_aside" type="button" name="button">John Doe</button>
+           <button class="color_white btn_general" type="submit" name="button">John Doe</button>
           </div>
         </div>
         <!-- /icona e users connesso -->
@@ -79,37 +79,62 @@
     <!-- /aside -->
   </main>
   <!-- /CORPO -->
+  <!-- FINE PAGINA -->
   <footer>
+    <!-- box copertina -->
     <div class="box_sinistro">
+      <!-- immagine copertina -->
      <img src="img/sinister.jpeg" alt="sinister-photo">
      <div class="artist_song_name">
        <h5 class="color_white">Sinister</h5>
        <h6 class="color_grey">Brano Nome</h6>
      </div>
-     <div class="box_icon_footer color_grey">
-       <i class="far fa-heart"></i>
-       <i class="far fa-folder"></i>
+     <!-- /immagine copertina -->
+     <!-- icone heart e folder -->
+     <div class="box_icon_footer">
+       <button class="btn_general heart" type="submit" name="button"><i class="far fa-heart color_grey"></i></button>
+       <button class="btn_general folder" type="submit" name="button"><i class="far fa-folder color_grey"></i></button>
      </div>
+     <!-- /icone heart e folder -->
     </div>
+    <!-- box copertina -->
+    <!-- box player -->
      <div class="box_icon_player color_white">
-       <ul class="list_player">
-         <li><i class="fas fa-random other_buttons"></i></li>
-         <li><i class="fas fa-caret-left button_arrow"></i></li>
-         <li><i class="far fa-play-circle button_play"></i></i></li>
-         <li><i class="fas fa-caret-right button_arrow"></i></li>
-         <li><i class="fas fa-redo-alt other_buttons"></i></li>
-       </ul>
-          <div class="bar scorrimento"></div>
-     </div>
-     <div class="box_destro color_white">
-       <i class="fas fa-list"></i>
-       <i class="fas fa-desktop"></i>
-       <i class="fas fa-volume-up"></i>
-       <div class="bar volume">
-
+        <div class="player_buttons">
+          <!-- tasti -->
+          <button class="btn_general color_white" type="submit" name="button"><i class="fas fa-random other_buttons"></i></button>
+          <button class="btn_general color_white" type="submit" name="button"><i class="fas fa-caret-left button_arrow"></i></button>
+          <button class="btn_general color_white" type="submit" name="button"><i class="far fa-play-circle button_play"></i></i></button>
+          <button class="btn_general color_white" type="submit" name="button"><i class="fas fa-caret-right button_arrow"></i></button>
+          <button class="btn_general color_white" type="submit" name="button"><i class="fas fa-redo-alt other_buttons"></i></button>
+        </div>
+        <!-- /tasti -->
+        <!-- barra scorrimento -->
+       <div class="box_bar">
+         <span>0:25</span>
+         <div class="bar scorrimento"><div class="bar scor_width">
+           <i class="fas fa-dot-circle circle"></i></div>
+         </div>
+         <span>4:35</span>
        </div>
+       <!-- /barra scorrimento -->
+      </div>
+      <!-- /box player -->
+      <!-- box icone menu e volume -->
+     <div class="box_destro color_white">
+       <button class="btn_general color_white" type="submit" name="button"><i class="fas fa-list"></i></button>
+       <button class="btn_general color_white" type="submit" name="button"><i class="fas fa-desktop"></i></button>
+       <button class="btn_general color_white" type="submit" name="button"><i class="fas fa-volume-up"></i></button>
+       <!-- barra volume -->
+       <div class="bar volume">
+        <div class="bar vol_width">
+          <i class="fas fa-dot-circle circle"></i>
+         </div>
+      </div>
+       <!-- /barra volume -->
      </div>
-
+     <!-- /box icone menu e volume -->
   </footer>
+  <!-- /FINE PAGINA -->
 </body>
 </html>

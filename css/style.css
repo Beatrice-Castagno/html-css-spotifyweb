@@ -40,11 +40,11 @@ a {
   color: #666666;
 }
 
-a:hover {
+/* a:hover {
  color: #fff;
-}
+} */
 
-.btn_aside {
+.btn_general {
   cursor: pointer;
   background: none;
   outline: none;
@@ -85,32 +85,35 @@ a:hover {
   padding-bottom: 5px;
 }
 
+.list_nav a {
+  display: flex;
+  align-items: center;
+  fill: #666666;
+}
+
 .list_nav svg {
   height: 22px;
   margin-right: 8px;
+}
+
+.list_nav a:hover  {
+  color: #fff;
+  fill: #fff;
 }
 
 .create_playlist {
   margin: 10px 0;
 }
 
+.create_playlist:hover .button_playlist i,
+.create_playlist:hover .button_playlist button {
+  color: #fff;
+}
+
 .button_playlist {
   display: flex;
   align-items: center;
   margin-top: 10px;
-}
-
-.box_playlist:hover a {
-  color: #fff;
-}
-
-.button_playlist button:hover {
-  color: #fff;
-}
-
-.button_playlist i:hover {
-  color: green;
-  cursor: pointer;
 }
 
 .button_playlist button {
@@ -125,6 +128,10 @@ a:hover {
 .playlist_name li {
   margin-bottom: 10px;
   overflow: auto;
+}
+
+.playlist_name a:hover {
+  color: #fff;
 }
 
 .box_playlist {
@@ -158,13 +165,14 @@ a:hover {
   align-items: center;
 }
 
+.download_app:hover button,
+.download_app:hover i {
+  color: #fff;
+}
+
 .users_login i {
   font-size: 25px;
   margin-right: 10px;
-}
-
-.download_app button:hover {
-  color: #fff;
 }
 
 .users_login button:hover {
@@ -180,6 +188,7 @@ footer {
   background-color: #282828;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 .box_sinistro {
@@ -211,15 +220,31 @@ footer {
   margin-right: 10px;
   font-size: 18px;
 }
+
+.heart i:hover {
+  color: #F56A6A;
+}
+
+.folder i:hover {
+  color: #fff;
+}
+
 /* icone player */
 
 .box_icon_player {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5px;
+  width: 50%;
 }
 
-.list_player li {
+.player_buttons {
+  display: flex;
+  align-items: center;
+}
+
+.player_buttons button {
   margin: 0 10px;
 }
 
@@ -227,29 +252,36 @@ footer {
  font-size: 15px;
 }
 
+.other_buttons:hover {
+  transition: 0.5s;
+  transform: scale(1.3, 1.3);
+}
+
 .button_play {
   font-size: 40px;
   margin: 0 15px;
+}
+
+.button_play:hover {
+  transition: 0.5s;
+  transform: scale(1.1, 1.1);
 }
 
 .button_arrow {
   font-size: 30px;
 }
 
-.bar {
-  border-radius: 10px;
-  height: 3px;
-  background-color: grey;
+.button_arrow:hover {
+  transition: 0.5s;
+  transform: scale(1.4, 1.4);
 }
 
-.scorrimento {
-  display: flex;
-  width: 400px;
-  margin: 20px 0;
-}
+/* /icone player */
 
 .box_destro {
-  padding-right: 10px;
+  width: 20%;
+  justify-content: flex-end;
+  margin-right: 15px;
 }
 
 .box_destro i {
@@ -257,10 +289,63 @@ footer {
   font-size: 15px;
 }
 
+/* barra scorrimento */
+.box_bar {
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  border-radius: 10px;
+  height: 5px;
+  background-color: grey;
+}
+
+.circle {
+  display:none;
+  cursor: pointer;
+}
+
+.scorrimento {
+  margin: 15px;
+  width: 60%;
+}
+
+.scor_width {
+  height:100%;
+  width: 10%;
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.scor_width:hover .circle,
+.vol_width:hover .circle {
+  display: block;
+}
+
+.scor_width:hover,
+.vol_width:hover {
+  background-color: lightgreen;
+}
+
 .volume {
   margin-left: 3px;
-  width: 100px;
+  width: 30%;
 }
+
+.vol_width {
+ height:100%;
+ width: 20%;
+ background-color: lightgrey;
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+}
+/* /barra scorrimento */
 
 /* /icone player */
 /* footer */
@@ -283,6 +368,16 @@ footer {
     display: none;
   }
   /* /aside */
+  /* footer */
+    .box_icon_footer {
+      flex-direction: column;
+    }
+
+    .box_icon_footer button {
+      padding: 5px 0;
+    }
+
+  /* /footer */
 }
 
 /* SMARTPHONE */
@@ -348,9 +443,15 @@ footer {
    color: #fff;
  }
  /* /aside */
-/* footer */
-.box_icon_player {
-  width: 20%;
-}
+ /* footer */
+  .box_icon_footer {
+    flex-direction: column;
+    padding-left: 20px;
+  }
+
+  .box_icon_footer button {
+    padding: 5px 0;
+  }
+  /* /footer */
 
 }
