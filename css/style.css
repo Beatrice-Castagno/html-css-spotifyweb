@@ -14,6 +14,7 @@ main {
   width: 100%;
   height: calc(100vh - 100px);
   background-color: #141922;
+  display: flex;
 }
 
 .text_center {
@@ -47,15 +48,13 @@ h2 {
 }
 
 h4 {
+  font-size: 16px;
   font-weight: bold;
 }
 
 p {
   color: #666666;
 }
-/* a:hover {
- color: #fff;
-} */
 
 .btn_general {
   cursor: pointer;
@@ -230,16 +229,26 @@ p {
   transform: scale(1.1, 1.1);
 }
 /* /section button upgrade */
-
+/* prima riga album */
 #album {
- height: 100%;
+ height: calc(100% - 100px);
  width: calc(100% - 300px);
- position: fixed;
- top: 100px;
- right: 0;
- padding-left: 30px;
  overflow: auto;
+ margin-top: 100px;
+ padding-left: 20px;
 }
+
+#album::-webkit-scrollbar {
+  width: 6px;
+}
+
+#album::-webkit-scrollbar-thumb,
+#album::-webkit-scrollbar-button {
+  background-color: #282828;
+  border-radius: 10px;
+}
+
+/* lista navigazione top */
 
 .list_main {
   display: flex;
@@ -270,12 +279,23 @@ p {
  width: 40%;
  background: lime;
 }
+/* /lista navigazione top */
+
+/* copertine album */
 
 .container_copertine {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 30px 0;
+}
+
+.box_copertina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 20px;
 }
 
 .taglia {
@@ -289,15 +309,9 @@ p {
   -webkit-line-clamp: 2;
 }
 
-.box_copertina {
+.no_space {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.img_album img {
-  height: 230px;
-  margin-right: 15px;
+  justify-content: flex-start;
 }
 
 .img_album {
@@ -309,6 +323,11 @@ p {
   width: calc(100% - 15px);
 }
 
+.img_album img {
+  height: 230px;
+  margin-right: 15px;
+}
+
 .info_album {
   display: flex;
   flex-direction: column;
@@ -317,7 +336,6 @@ p {
 }
 
 .info_album h4 {
-  text-transform: uppercase;
   margin-bottom: 5px;
 }
 
@@ -339,7 +357,29 @@ p {
   background-position: 50% 50%;
 }
 
+.img_radius {
+  border-radius: 50% 50%;
+}
 
+.overlay_radius::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50% 50%;
+}
+
+.overlay_radius:hover::after {
+  background-color: rgba(0,0,0, 0.5);
+  background-image: url("../img/play-button.svg");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 50% 50%;
+}
+/* /copertine e album */
 /* footer */
 footer {
   position: relative;
@@ -398,7 +438,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5px;
+  padding-top: 15px;
   width: 50%;
 }
 
@@ -509,8 +549,6 @@ footer {
  justify-content: flex-start;
 }
 /* /barra scorrimento */
-
-/* /icone player */
 /* footer */
 
 /* RESPONSIVE */
@@ -525,6 +563,7 @@ footer {
 
 /* TABLLET */
 @media screen and (min-width:768px) and (max-width:991px) {
+  /* main */
   /* aside */
   .aside_left {
     width: 200px;
@@ -534,7 +573,7 @@ footer {
     display: none;
   }
   /* /aside */
-  /* main */
+  /* content */
   #upgrade {
     width: calc(100% - 200px);
   }
@@ -542,6 +581,7 @@ footer {
   #album {
     width: calc(100% - 200px);
   }
+  /* content */
   /* /main */
   /* footer */
     .box_icon_footer {
@@ -556,6 +596,7 @@ footer {
 
 /* SMARTPHONE */
 @media screen and (max-width:767px) {
+  /* main */
   /* aside */
   .aside_left {
     position: relative;
@@ -578,14 +619,27 @@ footer {
    color: #fff;
  }
 
- .list_nav svg {
+ .list_nav a {
   display: visible;
   color: #fff;
   height: 25px;
-  margin-right: 0px;
+  margin-left: 0px;
  }
 
- .list_nav a,
+ .list_nav li {
+   margin-bottom: 5px;
+ }
+
+ .list_nav svg {
+   margin-right: 0px
+ }
+
+ .list_nav li:hover {
+   border: 0px;
+   border-bottom: 2px solid lime;
+ }
+
+ .list_nav span,
  .create_playlist,
  .box_playlist,
  .download_app button,
@@ -621,7 +675,7 @@ footer {
    color: #fff;
  }
  /* /aside */
- /* main */
+ /* content */
  #upgrade {
    width: calc(100% - 90px);
  }
@@ -629,6 +683,14 @@ footer {
  #album {
    width: calc(100% - 90px);
  }
+  .title_section {
+  text-align: center;
+  }
+
+  .box_copertina {
+    margin: 10px auto;
+  }
+  /* /content */
  /* /main */
  /* footer */
   .box_icon_footer {
