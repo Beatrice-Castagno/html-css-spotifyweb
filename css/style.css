@@ -72,11 +72,11 @@ p {
   height: 100%;
   width: 300px;
   background-color: #000;
-  padding-left: 30px;
 }
 
 .box_logo {
   margin-bottom: 10px;
+    padding-left: 30px;
 }
 
 .logo_large {
@@ -98,10 +98,15 @@ p {
   padding-bottom: 5px;
 }
 
+.list_nav li:hover {
+  border-left: 2px solid lime;
+}
+
 .list_nav a {
   display: flex;
   align-items: center;
   fill: #666666;
+  margin-left: 30px;
 }
 
 .list_nav svg {
@@ -116,6 +121,7 @@ p {
 
 .create_playlist {
   margin: 10px 0;
+  padding-left: 30px;
 }
 
 .create_playlist:hover .button_playlist i,
@@ -151,6 +157,7 @@ p {
   overflow-y: auto;
   margin: 12px 0;
   height: 100%;
+  padding-left: 30px;
 }
 
 .playlist_name li {
@@ -159,6 +166,7 @@ p {
 
 .box_account {
   padding-bottom: 15px;
+  padding-left: 30px;
 }
 
 .box_account hr {
@@ -251,7 +259,7 @@ p {
 .list_main li:after {
  content: '';
  display: block;
- margin: 0 auto;
+ margin: 5px auto;
  height: 3px;
  width: 0px;
  background: transparent;
@@ -267,7 +275,6 @@ p {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
   margin: 30px 0;
 }
 
@@ -299,6 +306,7 @@ p {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  width: calc(100% - 15px);
 }
 
 .info_album {
@@ -358,6 +366,9 @@ footer {
 
 .artist_song_name {
   padding-left: 10px;
+}
+.artist_song_name h5 {
+  margin-bottom: 5px;
 }
 
 .box_sinistro img {
@@ -540,7 +551,6 @@ footer {
     .box_icon_footer button {
       padding: 5px 0;
     }
-
   /* /footer */
 }
 
@@ -551,7 +561,10 @@ footer {
     position: relative;
     width: 90px;
     align-items: center;
-    padding:0;
+  }
+
+  .box_logo {
+    padding-left: 0px;
   }
 
   .logo_large {
@@ -584,6 +597,7 @@ footer {
  .box_account {
    position:absolute;
    bottom:0;
+   padding-left: 0px;
  }
 
  .download_app,
