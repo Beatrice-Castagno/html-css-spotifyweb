@@ -244,7 +244,7 @@ p {
 
 #album::-webkit-scrollbar-thumb,
 #album::-webkit-scrollbar-button {
-  background-color: #282828;
+  background-color: #666666;
   border-radius: 10px;
 }
 
@@ -285,7 +285,7 @@ p {
 
 .container_copertine {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 30px 0;
 }
@@ -312,6 +312,10 @@ p {
 .no_space {
   display: flex;
   justify-content: flex-start;
+}
+
+.title_section {
+  margin-left: 10px;
 }
 
 .img_album {
@@ -393,7 +397,7 @@ footer {
 .box_sinistro {
   padding-left: 10px;
   font-size: 15px;
-  width: 20%;
+  width: 25%;
 }
 
 .box_sinistro,
@@ -416,7 +420,7 @@ footer {
 }
 
 .box_icon_footer {
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 .box_icon_footer i {
@@ -470,11 +474,11 @@ footer {
   transform: scale(1.1, 1.1);
 }
 
-.button_arrow {
+.buttons_arrow {
   font-size: 30px;
 }
 
-.button_arrow:hover {
+.buttons_arrow:hover {
   transition: 0.5s;
   transform: scale(1.4, 1.4);
 }
@@ -482,7 +486,7 @@ footer {
 /* /icone player */
 
 .box_destro {
-  width: 20%;
+  width: 25%;
   justify-content: flex-end;
   margin-right: 15px;
 }
@@ -584,13 +588,25 @@ footer {
   /* content */
   /* /main */
   /* footer */
-    .box_icon_footer {
-      flex-direction: column;
-    }
+  .box_icon_footer {
+    flex-direction: column;
+    padding-left: 20px;
+  }
 
-    .box_icon_footer button {
-      padding: 5px 0;
-    }
+  .box_icon_footer i {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+
+  .box_sinistro img {
+    height: 40px;
+  }
+
+  .artist_song_name {
+    font-size: 13px;
+  }
+
+
   /* /footer */
 }
 
@@ -683,6 +699,7 @@ footer {
  #album {
    width: calc(100% - 90px);
  }
+ 
   .title_section {
   text-align: center;
   }
@@ -693,14 +710,63 @@ footer {
   /* /content */
  /* /main */
  /* footer */
+
+ .box_sinistro img {
+   height: 35px;
+ }
+
+ .artist_song_name {
+   font-size: 12px;
+ }
   .box_icon_footer {
     flex-direction: column;
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
-  .box_icon_footer button {
+  .box_icon_footer i {
     padding: 5px 0;
+    font-size: 15px;
   }
+
+  .box_icon_player {
+    width: 80%;
+  }
+
+  .other_buttons {
+    font-size: 12px;
+  }
+
+  .button_play {
+    font-size: 35px;
+  }
+
+  .buttons_arrow {
+    font-size: 25px;
+  }
+
+  .box_bar span {
+    font-size: 10px;
+  }
+
+  .scorrimento {
+    width: 40%;
+  }
+
+  .box_destro {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 5%;
+  }
+
+  .box_destro i {
+    padding: 6px 0;
+  }
+
+  .volume {
+    display: none;
+  }
+
   /* /footer */
 
 }
